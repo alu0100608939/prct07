@@ -59,7 +59,7 @@ describe Fraccion do
          (@f1 / @f2).should eq (Fraccion.new(4,-6))
       end
       it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
-         
+         (@f1 % @f2).should eq (Fraccion.new(-6,1))
       end
       it "Se debe de poder comprobar si una fracion es menor que otra" do
          
