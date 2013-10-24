@@ -41,7 +41,7 @@ describe Fraccion do
       @f1.reciprocal.should eq (Fraccion.new(2,1))
     end
      it "Se debe calcular el opuesto de una fraccion con -" do
-    -@f1.should eq (Fraccion.new(-1,2))
+    @f1.-.should eq (Fraccion.new(-1,2))
     end
   end
 end

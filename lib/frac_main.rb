@@ -23,6 +23,10 @@ class Fraccion
   def reciprocal
     Fraccion.new(@denom,@num)
   end
+  
+  def -
+      Fraccion.new(-@num,@denom)
+  end
     
 end
 
