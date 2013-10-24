@@ -11,6 +11,13 @@ class Fraccion
   def to_float
     @num/@denom
   end
+  def == (other)
+    if other.is_a? Numeric
+      return @num/@denom == other
+    end
+    @num == other.num && @denom == other.denom
+  end
+    
 end
 
 
