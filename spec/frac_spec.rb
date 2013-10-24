@@ -71,7 +71,7 @@ describe Fraccion do
          (@f2 <= @f1).should eq (true)
       end
       it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
-         
+         (@f2 >= @f1).should eq (false)
       end
    end
 end
