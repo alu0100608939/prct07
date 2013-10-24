@@ -4,4 +4,9 @@ class Fraccion
   def initialize(x,y)
     @num,@denom = x,y
   end
+  def to_s
+    "#{@num}/#{@denom}"
+  end
 end
+
+

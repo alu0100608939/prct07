@@ -4,8 +4,7 @@ describe Fraccion do
   before :each do
     @f1 = Fraccion.new(1,1)
   end
-  
-  describe "# Existen Elementos correctos en la fraccion" do
+  describe "Racional" do
     it "Existe un valor correcto para el numerador" do
       @f1.num.should be_true
     end
@@ -17,19 +16,17 @@ describe Fraccion do
       @f1.denom.should eq(@f1.denom/gcd(@f1.denom,@f1.num)) 
       @f1.num.should eq(@f1.num/gcd(@f1.denom,@f1.num))
     end
-  end
-  describe "# Existen metodos de acceso para los elementos" do
     it "Se debe invocar al metodo num() para obtener el numerador" do
       @f1.num().should eq(1)
     end
      it "Se debe invocar al metodo num() para obtener el denominador" do
       @f1.denom().should eq(1)
     end
-  end
-  describe "#Existen metodos para mostrar la fraccion en distintos formatos" do
-    it "Se debe mostrar por la consola la fracción de la forma: a/b" do
-      print @f1
+    it "Se debe mostar por la consola la fraccion de la forma: a/b" do
+     @f1.to_s.should eq ("1/1")
+    end
+    it "Se debe mostrar por la consola la fraccion en formato flotante" do 
+      @f1.to_float.should eq (1)
     end
   end
-  
 end
