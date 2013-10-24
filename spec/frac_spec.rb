@@ -26,5 +26,10 @@ describe Fraccion do
       @f1.denom().should eq(1)
     end
   end
+  describe "#Existen metodos para mostrar la fraccion en distintos formatos" do
+    it "Se debe mostrar por la consola la fracción de la forma: a/b" do
+      print @f1
+    end
+  end
   
 end
