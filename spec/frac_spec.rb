@@ -28,5 +28,9 @@ describe Fraccion do
     it "Se debe mostrar por la consola la fraccion en formato flotante" do 
       @f1.to_float.should eq (1)
     end
+    it "Se debe poder comprobar si dos fracciones son iguales con == " do
+      A = Fraccion.new(4,4)
+      (A == @f1).should be_true
+    end
   end
 end
