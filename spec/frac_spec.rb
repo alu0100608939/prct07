@@ -40,5 +40,8 @@ describe Fraccion do
     it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
       @f1.reciprocal.should eq (Fraccion.new(2,1))
     end
+     it "Se debe calcular el opuesto de una fraccion con -" do
+    -@f1.should eq (Fraccion.new(-1,2))
+    end
   end
 end
