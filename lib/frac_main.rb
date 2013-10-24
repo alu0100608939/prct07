@@ -74,6 +74,10 @@ class Fraccion
       return ((num/denom) <= (other.num/other.denom))
    end
    
+   def >= (other) 
+      return ((num/denom) >= (other.num/other.denom))
+   end
+   
 end
 
 
