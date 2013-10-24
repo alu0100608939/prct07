@@ -62,7 +62,7 @@ describe Fraccion do
          (@f1 % @f2).should eq (Fraccion.new(-2,1))
       end
       it "Se debe de poder comprobar si una fracion es menor que otra" do
-         
+         (@f2 < @f1).should eq (true)
       end
       it "Se debe de poder comprobar si una fracion es mayor que otra" do
          
