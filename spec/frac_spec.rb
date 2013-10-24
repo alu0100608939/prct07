@@ -21,11 +21,11 @@ describe Fraccion do
     it "Se debe invocar al metodo num() para obtener el numerador" do
       @f1.num().should eq(num)
     end
-     it "Se debe invocar al metodo num() para obtener el denominador" do
+    it "Se debe invocar al metodo num() para obtener el denominador" do
       @f1.denom().should eq(denom)
     end
     it "Se debe mostar por la consola la fraccion de la forma: a/b" do
-     @f1.to_s.should eq ("#{num}/#{denom}")
+      @f1.to_s.should eq ("#{num}/#{denom}")
     end
     it "Se debe mostrar por la consola la fraccion en formato flotante" do 
       @f1.to_float.should eq (num/denom)
@@ -40,8 +40,35 @@ describe Fraccion do
     it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
       @f1.reciprocal.should eq (Fraccion.new(2,1))
     end
-     it "Se debe calcular el opuesto de una fraccion con -" do
-    @f1.-.should eq (Fraccion.new(-1,2))
+    it "Se debe calcular el opuesto de una fraccion con -" do
+      @f1.-.should eq (Fraccion.new(-1,2))
+    end
+    it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+       
+    end
+    it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
+       
+    end
+    it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
+       
+    end
+    it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+       
+    end
+    it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+       
+    end
+    it "Se debe de poder comprobar si una fracion es menor que otra" do
+       
+    end
+    it "Se debe de poder comprobar si una fracion es mayor que otra" do
+       
+    end
+    it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+       
+    end
+    it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+       
     end
   end
 end
