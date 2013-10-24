@@ -1,8 +1,10 @@
 require "lib/frac_main.rb"
 
+num = 1
+denom = 1
 describe Fraccion do
   before :each do
-    @f1 = Fraccion.new(1,1)
+    @f1 = Fraccion.new(num,denom)
   end
   describe "Racional" do
     it "Existe un valor correcto para el numerador" do
@@ -17,20 +19,23 @@ describe Fraccion do
       @f1.num.should eq(@f1.num/gcd(@f1.denom,@f1.num))
     end
     it "Se debe invocar al metodo num() para obtener el numerador" do
-      @f1.num().should eq(1)
+      @f1.num().should eq(num)
     end
      it "Se debe invocar al metodo num() para obtener el denominador" do
-      @f1.denom().should eq(1)
+      @f1.denom().should eq(denom)
     end
     it "Se debe mostar por la consola la fraccion de la forma: a/b" do
-     @f1.to_s.should eq ("1/1")
+     @f1.to_s.should eq ("#{num}/#{denom}")
     end
     it "Se debe mostrar por la consola la fraccion en formato flotante" do 
-      @f1.to_float.should eq (1)
+      @f1.to_float.should eq (num/denom)
     end
     it "Se debe poder comprobar si dos fracciones son iguales con == " do
       A = Fraccion.new(4,4)
       (A == @f1).should be_true
+    end
+    it "Se debe calcualr el valor absoluto de una fraccion con el metodo abs" do
+      @f1.abs.should eq (@f1.num.abs/@f2.denom.abs)
     end
   end
 end
