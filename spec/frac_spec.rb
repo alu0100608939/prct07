@@ -1,7 +1,7 @@
 require "lib/frac_main.rb"
 
 num = 1
-denom = 1
+denom = 2
 describe Fraccion do
   before :each do
     @f1 = Fraccion.new(num,denom)
@@ -31,11 +31,14 @@ describe Fraccion do
       @f1.to_float.should eq (num/denom)
     end
     it "Se debe poder comprobar si dos fracciones son iguales con == " do
-      A = Fraccion.new(4,4)
+      A = Fraccion.new(2,4)
       (A == @f1).should be_true
     end
     it "Se debe calcualr el valor absoluto de una fraccion con el metodo abs" do
       @f1.abs.should eq (@f1.num.abs/@f1.denom.abs)
+    end
+    it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+      @f1.reciprocal.should eq (Fraccion.new(1,2))
     end
   end
 end
