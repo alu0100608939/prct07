@@ -25,19 +25,27 @@ class Fraccion
    end
    
    def + (other)
-         #Se calculan los nuevos valores
-         num = @num*other.denom + @denom*other.num
-         denom = @denom*other.denom
-      
-         return Fraccion.new(num,denom)
+      #Se calculan los nuevos valores
+      num = @num*other.denom + @denom*other.num
+      denom = @denom*other.denom
+   
+      return Fraccion.new(num,denom)
    end
    
    def - (other = Fraccion.new(@num*2,@denom))
-         #Se calculan los nuevos valores
-         num = @num*other.denom - @denom*other.num
-         denom = @denom*other.denom
-      
-         return Fraccion.new(num,denom)
+      #Se calculan los nuevos valores
+      num = @num*other.denom - @denom*other.num
+      denom = @denom*other.denom
+   
+      return Fraccion.new(num,denom)
+   end
+   
+   def * (other)
+      #Se calculan los nuevos valores
+      num = @num*other.num
+      denom = @denom*other.denom
+    
+      return Fraccion.new(num,denom)
    end
     
 end
