@@ -1,4 +1,4 @@
-require "gcd.rb"
+require "./lib/gcd.rb"
 class Fraccion
    attr_reader :num, :denom
    def initialize(x,y)

@@ -1,4 +1,4 @@
-require "frac_main.rb"
+require "./lib/frac_main.rb"
 
 num1 = 1
 denom1 = 2
