@@ -38,7 +38,7 @@ describe Fraccion do
       @f1.abs.should eq (@f1.num.abs/@f1.denom.abs)
     end
     it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
-      @f1.reciprocal.should eq (Fraccion.new(1,2))
+      @f1.reciprocal.should eq (Fraccion.new(2,1))
     end
   end
 end

@@ -20,6 +20,9 @@ class Fraccion
   def abs
     @num.abs/@denom.abs
   end
+  def reciprocal
+    Fraccion.new(@denom,@num)
+  end
     
 end
 
