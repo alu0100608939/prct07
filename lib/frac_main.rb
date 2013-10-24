@@ -62,6 +62,10 @@ class Fraccion
       return Fraccion.new(num % denom,1)
    end
    
+   def < (other) 
+      return ((num/denom) < (other.num/other.denom))
+   end
+   
 end
 
 
