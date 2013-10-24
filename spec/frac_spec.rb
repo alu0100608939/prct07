@@ -22,6 +22,9 @@ describe Fraccion do
     it "Se debe invocar al metodo num() para obtener el numerador" do
       @f1.num().should eq(1)
     end
+     it "Se debe invocar al metodo num() para obtener el denominador" do
+      @f1.denom().should eq(1)
+    end
   end
   
 end
