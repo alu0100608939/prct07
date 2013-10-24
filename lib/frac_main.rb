@@ -7,6 +7,9 @@ class Fraccion
   def to_s
     "#{@num}/#{@denom}"
   end
+  def to_float
+    @num/@denom
+  end
 end
 
 
