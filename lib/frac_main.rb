@@ -55,7 +55,12 @@ class Fraccion
       return Fraccion.new(num,denom)
    end
    
-   
+   def % (other) 
+      num = @num*other.denom
+      denom = @denom*other.num
+      
+      return Fraccion.new(num % denom,1)
+   end
    
 end
 
