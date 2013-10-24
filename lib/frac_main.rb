@@ -21,11 +21,19 @@ class Fraccion
     @num.abs/@denom.abs
   end
   def reciprocal
-    Fraccion.new(@denom,@num)
+      Fraccion.new(@denom,@num)
   end
   
   def -
       Fraccion.new(-@num,@denom)
+  end
+  
+  def + (other)
+      #Se calculan los nuevos valores
+      num = @num*other.denom + @denom*other.num
+      denom = @denom*other.denom
+    
+      return Fraccion.new(num,denom)
   end
     
 end
