@@ -35,7 +35,7 @@ describe Fraccion do
       (A == @f1).should be_true
     end
     it "Se debe calcualr el valor absoluto de una fraccion con el metodo abs" do
-      @f1.abs.should eq (@f1.num.abs/@f2.denom.abs)
+      @f1.abs.should eq (@f1.num.abs/@f1.denom.abs)
     end
   end
 end

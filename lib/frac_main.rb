@@ -17,6 +17,9 @@ class Fraccion
     end
     @num == other.num && @denom == other.denom
   end
+  def abs
+    @num.abs/@denom.abs
+  end
     
 end
 
