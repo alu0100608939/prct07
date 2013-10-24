@@ -50,7 +50,7 @@ describe Fraccion do
          (@f1 + @f2).should eq (Fraccion.new(-1,4))
       end
       it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
-         
+         (@f1 - @f2).should eq (Fraccion.new(-5,4))
       end
       it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
          
