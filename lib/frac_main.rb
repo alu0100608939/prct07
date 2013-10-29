@@ -1,5 +1,7 @@
 require "./lib/gcd.rb"
 class Fraccion
+  include Comparable
+  
    attr_reader :num, :denom
    def initialize(x,y)
       @num = x/gcd(x,y)
@@ -11,12 +13,7 @@ class Fraccion
    def to_float
       @num/@denom
    end
-   def == (other)
-      if other.is_a? Numeric
-         return @num/@denom == other
-      end
-      @num == other.num && @denom == other.denom
-   end
+  
    def abs
       @num.abs/@denom.abs
    end
@@ -62,20 +59,16 @@ class Fraccion
       return Fraccion.new(num % denom,1)
    end
    
-   def < (other) 
-      return ((num/denom) < (other.num/other.denom))
-   end
-   
-   def > (other) 
-      return ((num/denom) > (other.num/other.denom))
-   end
-   
-   def <= (other) 
-      return ((num/denom) <= (other.num/other.denom))
-   end
-   
-   def >= (other) 
-      return ((num/denom) >= (other.num/other.denom))
+   def <=> (other)
+     if ((num/denom) < (other.num/other.denom))
+       return -1
+     end
+     if ((num/denom) == (other.num/other.denom))
+       return 0
+     end
+     if ((num/denom) > (other.num/other.denom))
+      return 1
+     end
    end
    
 end
